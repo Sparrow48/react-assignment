@@ -1,8 +1,9 @@
 import React from "react";
+import "./UserOutput.css";
 
 const useroutput = props => {
   return (
-    <div>
+    <div className='UserOutput'>
       <p onClick={props.clicked}>UserName: {props.username}</p>
       <p>Happy coding!!!</p>
     </div>
