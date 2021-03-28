@@ -1,0 +1,10 @@
+input {
+  background-color: #dbcbb9;
+  border: 2px solid blue;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.p {
+  color: blue;
+}

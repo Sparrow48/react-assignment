@@ -5,7 +5,10 @@ const Validation = props => {
   if (props.count <= 5) {
     validationMess = "Text too short!!!";
   }
-  return <div>{validationMess}</div>;
+  const style = {
+    color: "blue",
+  };
+  return <div style={style}>{validationMess}</div>;
 };
 
 export default Validation;

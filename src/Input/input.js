@@ -1,10 +1,14 @@
 import React from "react";
+import "./input.css";
 
 const Input = props => {
+  const divStyle = {
+    paddingTop: "10px",
+  };
   return (
-    <div>
+    <div style={divStyle}>
       <input type='text' onChange={props.count} value={props.text} />
-      <p>Text is: {props.text}</p>
+      <p className='p'>{props.text}</p>
     </div>
   );
 };
