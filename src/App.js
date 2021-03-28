@@ -4,6 +4,7 @@ import UserInput from "./UserInput/UserInput";
 import UserOutput from "./UserOutput/UserOutput";
 import Input from "./Input/input";
 import Validation from "./ValidationConpunent/Validation";
+import Char from "./Char/Char";
 
 class App extends Component {
   state = {
@@ -40,6 +41,9 @@ class App extends Component {
   };
 
   render() {
+    const char = this.state.userInput.text.split("").map((ch, index) => {
+      return <Char chars={ch} key={index} />;
+    });
     return (
       <div className='App'>
         <UserOutput
@@ -56,9 +60,9 @@ class App extends Component {
         <Input
           text={this.state.userInput.text}
           count={this.changeInputHandler}
-          value={this.state.userInput.text}
         />
         <Validation count={this.state.userInput.text.length} />
+        {char}
       </div>
     );
   }
